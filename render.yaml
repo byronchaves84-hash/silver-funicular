@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: moorttys-voice-pwa
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/auth-required
+    envVars:
+      - key: APP_PASSWORD
+        sync: false
